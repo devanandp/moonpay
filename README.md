@@ -1,3 +1,6 @@
+# Moonpay app
+Custom application for Moonpay in React Native. Envisioned my thoughts to create some new features in Moonpay curated for every individual customer using our app
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
