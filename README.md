@@ -80,21 +80,13 @@ When you want to forcefully reload, for example to reset the state of your app, 
 
 You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
+## App Screenshots
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+![Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 52](https://github.com/user-attachments/assets/fd70f3c8-4908-407f-9b0c-ae6a3475e96e)
+![Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 34](https://github.com/user-attachments/assets/9bd4068b-9075-488b-975c-2dfa5bd0b729)
+![Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 25](https://github.com/user-attachments/assets/e3a25602-8f40-4519-9358-7c7eaf875672)
+![Screenshot_1745009387](https://github.com/user-attachments/assets/4226121e-625b-4219-ac61-1f6f66032925)
+![Screenshot_1745009384](https://github.com/user-attachments/assets/44358623-20b0-4f55-b934-52add9ec6ec6)
+![Screenshot_1745009361](https://github.com/user-attachments/assets/ffd9e99a-76f4-49ec-88cb-2f2c481fa12b)
 
-# Troubleshooting
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
