@@ -77,14 +77,18 @@ When you want to forcefully reload, for example to reset the state of your app, 
 
 ## App Screenshots
 
-iOS Screenshots:
-
-<img src="https://github.com/user-attachments/assets/fd70f3c8-4908-407f-9b0c-ae6a3475e96e" alt="Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 52" width="300"/>
-<img src="https://github.com/user-attachments/assets/9bd4068b-9075-488b-975c-2dfa5bd0b729" alt="Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 34" width="300"/>
-<img src="https://github.com/user-attachments/assets/e3a25602-8f40-4519-9358-7c7eaf875672" alt="Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 25" width="300"/>
 
 Android Screenshots:
 
-<img src="https://github.com/user-attachments/assets/4226121e-625b-4219-ac61-1f6f66032925" alt="Screenshot_1745009387" width="300"/>
-<img src="https://github.com/user-attachments/assets/44358623-20b0-4f55-b934-52add9ec6ec6" alt="Screenshot_1745009384" width="300"/>
-<img src="https://github.com/user-attachments/assets/ffd9e99a-76f4-49ec-88cb-2f2c481fa12b" alt="Screenshot_1745009361" width="300"/>
+<img src="https://github.com/user-attachments/assets/42fde98b-5f45-4e80-aabf-36cfe45a48c5" alt="Screenshot_1745009387" width="300"/>
+<img src="https://github.com/user-attachments/assets/bf76909e-c188-4364-928e-68abefc95fe0" alt="Screenshot_1745009384" width="300"/>
+<img src="https://github.com/user-attachments/assets/b0091f78-58f7-4b63-b935-18d135d7c371" alt="Screenshot_1745009361" width="300"/>
+<img src="https://github.com/user-attachments/assets/c0fab0b6-fdab-49fd-aa5e-168f7972cdf6" alt="Screenshot_1745009361" width="300"/>
+
+iOS Screenshots:
+
+<img src="https://github.com/user-attachments/assets/97acd018-5fdb-434d-91db-793a75f4e7d4" alt="Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 52" width="300"/>
+<img src="https://github.com/user-attachments/assets/0dfe5dcc-e581-425d-b849-8d4c6ba8db08" alt="Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 34" width="300"/>
+<img src="https://github.com/user-attachments/assets/ba344366-977d-425d-a013-a05fd6613677" alt="Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 25" width="300"/>
+
+
