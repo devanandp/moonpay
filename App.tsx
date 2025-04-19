@@ -5,11 +5,13 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {StatusBar} from 'react-native';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {enableScreens} from 'react-native-screens';
 import TabNavigator from './navigation/TabNavigator';
+import NetInfo from '@react-native-community/netinfo';
+import NoInternetScreen from './screens/NoInternetScreen';
 
 // Enable screens for better performance
 enableScreens();
@@ -29,10 +31,19 @@ const DarkTheme = {
 };
 
 function App(): React.JSX.Element {
+  const [isConnected, setIsConnected] = useState<boolean>(true);
+
+  useEffect(() => {
+    const unsubscribe = NetInfo.addEventListener(state => {
+      setIsConnected(state.isConnected ?? false);
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
     <NavigationContainer theme={DarkTheme}>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
-      <TabNavigator />
+      {!isConnected ? <NoInternetScreen /> : <TabNavigator />}
     </NavigationContainer>
   );
 }

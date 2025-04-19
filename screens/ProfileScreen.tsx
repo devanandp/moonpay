@@ -8,7 +8,7 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
-} from 'react-native';
+ } from 'react-native';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 

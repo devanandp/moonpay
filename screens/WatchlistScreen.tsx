@@ -1,18 +1,18 @@
-import React, {useState, useEffect} from 'react';
-import {
-  StyleSheet,
-  SafeAreaView,
-  StatusBar,
+import React, { useState, useEffect } from 'react';
+import { 
+  StyleSheet, 
+  SafeAreaView, 
+  StatusBar, 
   Alert,
   View,
   Text,
   ScrollView,
-  FlatList,
+  FlatList
 } from 'react-native';
-import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import WatchlistSection from '../components/WatchlistSection';
 import CryptoItem from '../components/CryptoItem';
-import {CryptoData} from '../types';
+import { CryptoData } from '../types';
 
 // All available cryptocurrencies
 const allCryptoData: CryptoData[] = [
@@ -81,10 +81,9 @@ interface WatchlistScreenProps {
   navigation: WatchlistScreenNavigationProp;
 }
 
-const WatchlistScreen: React.FC<WatchlistScreenProps> = ({navigation}) => {
+const WatchlistScreen: React.FC<WatchlistScreenProps> = ({ navigation }) => {
   // State to manage watchlist data
-  const [watchlist, setWatchlist] =
-    useState<CryptoData[]>(initialWatchlistData);
+  const [watchlist, setWatchlist] = useState<CryptoData[]>(initialWatchlistData);
   // State to manage available cryptocurrencies (not in watchlist)
   const [availableCryptos, setAvailableCryptos] = useState<CryptoData[]>([]);
 
@@ -92,9 +91,7 @@ const WatchlistScreen: React.FC<WatchlistScreenProps> = ({navigation}) => {
   useEffect(() => {
     // Filter all crypto data to exclude ones already in watchlist
     const watchlistIds = watchlist.map(item => item.id);
-    const available = allCryptoData.filter(
-      crypto => !watchlistIds.includes(crypto.id),
-    );
+    const available = allCryptoData.filter(crypto => !watchlistIds.includes(crypto.id));
     setAvailableCryptos(available);
   }, [watchlist]);
 
@@ -113,9 +110,7 @@ const WatchlistScreen: React.FC<WatchlistScreenProps> = ({navigation}) => {
           text: 'Remove',
           onPress: () => {
             // Filter out the cryptocurrency with the specified id
-            setWatchlist(prevWatchlist =>
-              prevWatchlist.filter(crypto => crypto.id !== id),
-            );
+            setWatchlist(prevWatchlist => prevWatchlist.filter(crypto => crypto.id !== id));
           },
           style: 'destructive',
         },
@@ -127,12 +122,12 @@ const WatchlistScreen: React.FC<WatchlistScreenProps> = ({navigation}) => {
   const handleAddToWatchlist = (id: string) => {
     // Find the crypto to add from available cryptos
     const cryptoToAdd = allCryptoData.find(crypto => crypto.id === id);
-
+    
     if (cryptoToAdd) {
       // Add to watchlist with isInWatchlist flag
       setWatchlist(prevWatchlist => [
         ...prevWatchlist,
-        {...cryptoToAdd, isInWatchlist: true},
+        { ...cryptoToAdd, isInWatchlist: true }
       ]);
     }
   };
@@ -140,28 +135,26 @@ const WatchlistScreen: React.FC<WatchlistScreenProps> = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
-
+      
       <ScrollView>
         {/* Watchlist Section */}
-        <WatchlistSection
-          watchlist={watchlist}
-          onRemove={handleRemoveFromWatchlist}
+        <WatchlistSection 
+          watchlist={watchlist} 
+          onRemove={handleRemoveFromWatchlist} 
         />
-
+        
         {/* Available Cryptocurrencies Section */}
         <View style={styles.availableSection}>
           <Text style={styles.sectionTitle}>Available Cryptocurrencies</Text>
           {availableCryptos.length === 0 ? (
             <View style={styles.emptyContainer}>
-              <Text style={styles.emptyText}>
-                All cryptocurrencies added to watchlist
-              </Text>
+              <Text style={styles.emptyText}>All cryptocurrencies added to watchlist</Text>
             </View>
           ) : (
             <FlatList
               data={availableCryptos}
-              keyExtractor={item => item.id}
-              renderItem={({item}) => (
+              keyExtractor={(item) => item.id}
+              renderItem={({ item }) => (
                 <CryptoItem
                   id={item.id}
                   name={item.name}
@@ -218,3 +211,4 @@ const styles = StyleSheet.create({
 });
 
 export default WatchlistScreen;
+
