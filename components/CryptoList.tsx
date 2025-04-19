@@ -58,7 +58,7 @@ const CryptoList: React.FC<CryptoListProps> = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingBottom: Platform.OS === 'android' ? 24 : 16, // Adds extra space for Android
+    paddingBottom: Platform.OS === 'android' ? 24 : 16, 
   },
   title: {
     fontSize: 24,
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   listContent: {
-    paddingBottom: Platform.OS === 'android' ? 24 : 16, // Ensures no clipping on Android
+    paddingBottom: Platform.OS === 'android' ? 24 : 16,
   },
   emptyContainer: {
     backgroundColor: '#2C2C2C',

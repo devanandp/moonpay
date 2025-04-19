@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
   },
 });
 
-// Note: 'logo' style remains for backwards compatibility but is no longer used.
 
 export default NoInternetScreen;
 

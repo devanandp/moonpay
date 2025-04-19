@@ -53,7 +53,7 @@ const HomeScreen: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
   const [activeAction, setActiveAction] = useState<'buy' | 'sell'>('buy');
 
-  // Filter cryptos based on selected filter (just a simulation)
+  // Filter cryptos based on selected filter
   const getFilteredCryptos = () => {
     switch (activeFilter) {
       case 'top':
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   filterButton: {
-    height: 40, // Sets a fixed height
+    height: 40,
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 20,

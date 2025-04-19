@@ -28,7 +28,7 @@ const TabNavigator = () => {
           fontSize: 12,
           marginBottom: 5,
         },
-        headerShown: false, // Hide the header
+        headerShown: false, 
       }}>
       <Tab.Screen
         name="Home"
