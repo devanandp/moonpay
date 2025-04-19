@@ -82,9 +82,14 @@ You've successfully run and modified your React Native App. :partying_face:
 
 ## App Screenshots
 
+iOS Screenshots:
+
 <img src="https://github.com/user-attachments/assets/fd70f3c8-4908-407f-9b0c-ae6a3475e96e" alt="Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 52" width="300"/>
 <img src="https://github.com/user-attachments/assets/9bd4068b-9075-488b-975c-2dfa5bd0b729" alt="Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 34" width="300"/>
 <img src="https://github.com/user-attachments/assets/e3a25602-8f40-4519-9358-7c7eaf875672" alt="Simulator Screenshot - iPhone 16 Pro - 2025-04-19 at 02 19 25" width="300"/>
+
+Android Screenshots:
+
 <img src="https://github.com/user-attachments/assets/4226121e-625b-4219-ac61-1f6f66032925" alt="Screenshot_1745009387" width="300"/>
 <img src="https://github.com/user-attachments/assets/44358623-20b0-4f55-b934-52add9ec6ec6" alt="Screenshot_1745009384" width="300"/>
 <img src="https://github.com/user-attachments/assets/ffd9e99a-76f4-49ec-88cb-2f2c481fa12b" alt="Screenshot_1745009361" width="300"/>
