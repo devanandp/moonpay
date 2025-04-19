@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import {View, Text, StyleSheet, FlatList, Platform} from 'react-native';
 import CryptoItem from './CryptoItem';
-import { CryptoData } from '../types';
+import {CryptoData} from '../types';
 
 interface CryptoListProps {
   availableCryptos: CryptoData[];
@@ -9,14 +9,14 @@ interface CryptoListProps {
   onAddToWatchlist: (id: string) => void;
 }
 
-const CryptoList: React.FC<CryptoListProps> = ({ 
-  availableCryptos, 
+const CryptoList: React.FC<CryptoListProps> = ({
+  availableCryptos,
   watchlistIds,
-  onAddToWatchlist 
+  onAddToWatchlist,
 }) => {
   // Filter out cryptos that are already in the watchlist
   const filteredCryptos = availableCryptos.filter(
-    crypto => !watchlistIds.includes(crypto.id)
+    crypto => !watchlistIds.includes(crypto.id),
   );
 
   if (filteredCryptos.length === 0) {
@@ -24,7 +24,9 @@ const CryptoList: React.FC<CryptoListProps> = ({
       <View style={styles.container}>
         <Text style={styles.title}>Available Cryptocurrencies</Text>
         <View style={styles.emptyContainer}>
-          <Text style={styles.emptyText}>All cryptocurrencies are in your watchlist</Text>
+          <Text style={styles.emptyText}>
+            All cryptocurrencies are in your watchlist
+          </Text>
         </View>
       </View>
     );
@@ -35,8 +37,8 @@ const CryptoList: React.FC<CryptoListProps> = ({
       <Text style={styles.title}>Available Cryptocurrencies</Text>
       <FlatList
         data={filteredCryptos}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
+        keyExtractor={item => item.id}
+        renderItem={({item}) => (
           <CryptoItem
             id={item.id}
             name={item.name}
@@ -56,6 +58,7 @@ const CryptoList: React.FC<CryptoListProps> = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingBottom: Platform.OS === 'android' ? 24 : 16, // Adds extra space for Android
   },
   title: {
     fontSize: 24,
@@ -65,7 +68,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   listContent: {
-    paddingBottom: 16,
+    paddingBottom: Platform.OS === 'android' ? 24 : 16, // Ensures no clipping on Android
   },
   emptyContainer: {
     backgroundColor: '#2C2C2C',
@@ -84,4 +87,3 @@ const styles = StyleSheet.create({
 });
 
 export default CryptoList;
-

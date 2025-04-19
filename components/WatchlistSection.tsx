@@ -1,20 +1,25 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
 import CryptoItem from './CryptoItem';
-import { CryptoData } from '../types';
+import {CryptoData} from '../types';
 
 interface WatchlistSectionProps {
   watchlist: CryptoData[];
   onRemove: (id: string) => void;
 }
 
-const WatchlistSection: React.FC<WatchlistSectionProps> = ({ watchlist, onRemove }) => {
+const WatchlistSection: React.FC<WatchlistSectionProps> = ({
+  watchlist,
+  onRemove,
+}) => {
   if (watchlist.length === 0) {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Watchlist</Text>
         <View style={styles.emptyContainer}>
-          <Text style={styles.emptyText}>No cryptocurrencies added to watchlist</Text>
+          <Text style={styles.emptyText}>
+            No cryptocurrencies added to watchlist
+          </Text>
         </View>
       </View>
     );
@@ -25,8 +30,8 @@ const WatchlistSection: React.FC<WatchlistSectionProps> = ({ watchlist, onRemove
       <Text style={styles.title}>Watchlist</Text>
       <FlatList
         data={watchlist}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
+        keyExtractor={item => item.id}
+        renderItem={({item}) => (
           <CryptoItem
             id={item.id}
             name={item.name}
@@ -75,4 +80,3 @@ const styles = StyleSheet.create({
 });
 
 export default WatchlistSection;
-

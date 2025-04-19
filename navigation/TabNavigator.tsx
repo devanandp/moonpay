@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // Screens
@@ -29,15 +29,18 @@ const TabNavigator = () => {
           marginBottom: 5,
         },
         headerShown: false, // Hide the header
-      }}
-    >
+      }}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="view-dashboard" color={color} size={size} />
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="view-dashboard"
+              color={color}
+              size={size}
+            />
           ),
         }}
       />
@@ -46,8 +49,12 @@ const TabNavigator = () => {
         component={WatchlistScreen}
         options={{
           tabBarLabel: 'Watchlist',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="chart-line" color={color} size={size} />
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="chart-line"
+              color={color}
+              size={size}
+            />
           ),
         }}
       />
@@ -56,8 +63,12 @@ const TabNavigator = () => {
         component={ProfileScreen}
         options={{
           tabBarLabel: 'Profile',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account-circle" color={color} size={size} />
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="account-circle"
+              color={color}
+              size={size}
+            />
           ),
         }}
       />
@@ -66,4 +77,3 @@ const TabNavigator = () => {
 };
 
 export default TabNavigator;
-

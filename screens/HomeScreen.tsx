@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import { 
-  View, 
-  Text, 
-  StyleSheet, 
-  ScrollView, 
-  TouchableOpacity, 
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
   SafeAreaView,
   StatusBar,
-  FlatList 
+  FlatList,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import CryptoItem from '../components/CryptoItem';
-import { CryptoData } from '../types';
+import {CryptoData} from '../types';
 
 // Sample cryptocurrency data
 const sampleCryptoData: CryptoData[] = [
@@ -73,73 +74,124 @@ const HomeScreen: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
-      
+
       {/* Buy/Sell Toggle */}
       <View style={styles.actionToggle}>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={[
-            styles.actionButton, 
-            activeAction === 'buy' && styles.activeActionButton
+            styles.actionButton,
+            activeAction === 'buy' && styles.activeActionButton,
           ]}
-          onPress={() => setActiveAction('buy')}
-        >
-          <Text style={[
-            styles.actionButtonText,
-            activeAction === 'buy' && styles.activeActionButtonText
-          ]}>Buy</Text>
+          onPress={() => setActiveAction('buy')}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <Text
+              style={[
+                styles.actionButtonText,
+                activeAction === 'buy' && styles.activeActionButtonText,
+              ]}>
+              Buy
+            </Text>
+            <Icon
+              name="arrow-up"
+              size={20}
+              color={activeAction === 'buy' ? '#FFFFFF' : '#B0B0B0'}
+              style={{marginLeft: 10}}
+            />
+          </View>
         </TouchableOpacity>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={[
-            styles.actionButton, 
-            activeAction === 'sell' && styles.activeActionButton
+            styles.actionButton,
+            activeAction === 'sell' && styles.activeActionButton,
           ]}
-          onPress={() => setActiveAction('sell')}
-        >
-          <Text style={[
-            styles.actionButtonText,
-            activeAction === 'sell' && styles.activeActionButtonText
-          ]}>Sell</Text>
+          onPress={() => setActiveAction('sell')}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <Text
+              style={[
+                styles.actionButtonText,
+                activeAction === 'sell' && styles.activeActionButtonText,
+              ]}>
+              Sell
+            </Text>
+            <Icon
+              name="arrow-down"
+              size={20}
+              color={activeAction === 'buy' ? '#FFFFFF' : '#B0B0B0'}
+              style={{marginLeft: 10}}
+            />
+          </View>
         </TouchableOpacity>
       </View>
 
       {/* Filters */}
-      <ScrollView 
-        horizontal 
+      <ScrollView
+        horizontal
         showsHorizontalScrollIndicator={false}
         style={styles.filtersContainer}
-        contentContainerStyle={styles.filtersContent}
-      >
-        <TouchableOpacity 
-          style={[styles.filterButton, activeFilter === 'all' && styles.activeFilterButton]}
-          onPress={() => setActiveFilter('all')}
-        >
-          <Text style={[styles.filterText, activeFilter === 'all' && styles.activeFilterText]}>All</Text>
+        contentContainerStyle={styles.filtersContent}>
+        <TouchableOpacity
+          style={[
+            styles.filterButton,
+            activeFilter === 'all' && styles.activeFilterButton,
+          ]}
+          onPress={() => setActiveFilter('all')}>
+          <Text
+            style={[
+              styles.filterText,
+              activeFilter === 'all' && styles.activeFilterText,
+            ]}>
+            All
+          </Text>
         </TouchableOpacity>
-        <TouchableOpacity 
-          style={[styles.filterButton, activeFilter === 'top' && styles.activeFilterButton]}
-          onPress={() => setActiveFilter('top')}
-        >
-          <Text style={[styles.filterText, activeFilter === 'top' && styles.activeFilterText]}>Top</Text>
+        <TouchableOpacity
+          style={[
+            styles.filterButton,
+            activeFilter === 'top' && styles.activeFilterButton,
+          ]}
+          onPress={() => setActiveFilter('top')}>
+          <Text
+            style={[
+              styles.filterText,
+              activeFilter === 'top' && styles.activeFilterText,
+            ]}>
+            Top
+          </Text>
         </TouchableOpacity>
-        <TouchableOpacity 
-          style={[styles.filterButton, activeFilter === 'gainers' && styles.activeFilterButton]}
-          onPress={() => setActiveFilter('gainers')}
-        >
-          <Text style={[styles.filterText, activeFilter === 'gainers' && styles.activeFilterText]}>Gainers</Text>
+        <TouchableOpacity
+          style={[
+            styles.filterButton,
+            activeFilter === 'gainers' && styles.activeFilterButton,
+          ]}
+          onPress={() => setActiveFilter('gainers')}>
+          <Text
+            style={[
+              styles.filterText,
+              activeFilter === 'gainers' && styles.activeFilterText,
+            ]}>
+            Gainers
+          </Text>
         </TouchableOpacity>
-        <TouchableOpacity 
-          style={[styles.filterButton, activeFilter === 'losers' && styles.activeFilterButton]}
-          onPress={() => setActiveFilter('losers')}
-        >
-          <Text style={[styles.filterText, activeFilter === 'losers' && styles.activeFilterText]}>Losers</Text>
+        <TouchableOpacity
+          style={[
+            styles.filterButton,
+            activeFilter === 'losers' && styles.activeFilterButton,
+          ]}
+          onPress={() => setActiveFilter('losers')}>
+          <Text
+            style={[
+              styles.filterText,
+              activeFilter === 'losers' && styles.activeFilterText,
+            ]}>
+            Losers
+          </Text>
         </TouchableOpacity>
       </ScrollView>
-      
+
       {/* Crypto List */}
       <FlatList
         data={getFilteredCryptos()}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
+        keyExtractor={item => item.id}
+        renderItem={({item}) => (
           <CryptoItem
             id={item.id}
             name={item.name}
@@ -167,14 +219,14 @@ const styles = StyleSheet.create({
     marginTop: 16,
     borderRadius: 8,
     overflow: 'hidden',
-    borderWidth: 1,
-    borderColor: '#2C2C2C',
   },
   actionButton: {
     flex: 1,
     paddingVertical: 12,
     alignItems: 'center',
+    borderRadius: 30,
     backgroundColor: '#1E1E1E',
+    marginHorizontal: 4, // Adds space between the buttons
   },
   activeActionButton: {
     backgroundColor: '#333333',
@@ -194,6 +246,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   filterButton: {
+    height: 40, // Sets a fixed height
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 20,
@@ -219,4 +272,3 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
-

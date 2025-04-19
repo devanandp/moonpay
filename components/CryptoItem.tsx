@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 interface CryptoItemProps {
   id: string;
@@ -26,10 +26,9 @@ const CryptoItem: React.FC<CryptoItemProps> = ({
         <Text style={styles.symbol}>{symbol}</Text>
         <Text style={styles.price}>${price.toLocaleString()}</Text>
       </View>
-      <TouchableOpacity 
-        style={[styles.button, { backgroundColor: actionColor }]} 
-        onPress={onAction}
-      >
+      <TouchableOpacity
+        style={[styles.button, {backgroundColor: actionColor}]}
+        onPress={onAction}>
         <Text style={styles.buttonText}>{actionLabel}</Text>
       </TouchableOpacity>
     </View>
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
     marginVertical: 6,
     marginHorizontal: 16,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.3,
     shadowRadius: 4,
     elevation: 3,
@@ -75,8 +74,8 @@ const styles = StyleSheet.create({
   },
   button: {
     paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 8,
+    paddingHorizontal: 18,
+    borderRadius: 20,
   },
   buttonText: {
     color: '#FFFFFF',
@@ -85,4 +84,3 @@ const styles = StyleSheet.create({
 });
 
 export default CryptoItem;
-

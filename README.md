@@ -1,7 +1,6 @@
 # Moonpay app
-Custom application for Moonpay in React Native. Envisioned my thoughts to create some new features in Moonpay curated for every individual customer using our app
 
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Custom application for Moonpay in React Native. Envisioned my thoughts to create some new features in Moonpay curated for every individual customer using our app
 
 # Getting Started
 
@@ -76,10 +75,6 @@ When you want to forcefully reload, for example to reset the state of your app, 
 - **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
 - **iOS**: Press <kbd>R</kbd> in iOS Simulator.
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
 ## App Screenshots
 
 iOS Screenshots:
@@ -93,5 +88,3 @@ Android Screenshots:
 <img src="https://github.com/user-attachments/assets/4226121e-625b-4219-ac61-1f6f66032925" alt="Screenshot_1745009387" width="300"/>
 <img src="https://github.com/user-attachments/assets/44358623-20b0-4f55-b934-52add9ec6ec6" alt="Screenshot_1745009384" width="300"/>
 <img src="https://github.com/user-attachments/assets/ffd9e99a-76f4-49ec-88cb-2f2c481fa12b" alt="Screenshot_1745009361" width="300"/>
-
-

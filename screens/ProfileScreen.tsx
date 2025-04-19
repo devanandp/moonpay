@@ -1,15 +1,15 @@
 import React from 'react';
-import { 
-  StyleSheet, 
-  SafeAreaView, 
-  StatusBar, 
-  View, 
-  Text, 
-  Image, 
-  TouchableOpacity, 
-  ScrollView 
+import {
+  StyleSheet,
+  SafeAreaView,
+  StatusBar,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  ScrollView,
 } from 'react-native';
-import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // Define the navigation props type for the component
@@ -28,83 +28,135 @@ const userData = {
   profileImage: null, // In a real app, this would be a path to an image
 };
 
-const ProfileScreen: React.FC<ProfileScreenProps> = ({ navigation }) => {
+const ProfileScreen: React.FC<ProfileScreenProps> = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
-      
+
       <ScrollView>
         {/* User Profile Section */}
         <View style={styles.profileSection}>
           <View style={styles.profileImageContainer}>
             {userData.profileImage ? (
-              <Image 
-                source={{ uri: userData.profileImage }} 
-                style={styles.profileImage} 
+              <Image
+                source={{uri: userData.profileImage}}
+                style={styles.profileImage}
               />
             ) : (
               <View style={styles.profileInitials}>
                 <Text style={styles.initialsText}>
-                  {userData.name.split(' ').map(n => n[0]).join('')}
+                  {userData.name
+                    .split(' ')
+                    .map(n => n[0])
+                    .join('')}
                 </Text>
               </View>
             )}
           </View>
           <Text style={styles.userName}>{userData.name}</Text>
           <Text style={styles.userEmail}>{userData.email}</Text>
-          
+
           <View style={styles.balanceContainer}>
             <Text style={styles.balanceLabel}>Wallet Balance</Text>
-            <Text style={styles.balanceAmount}>${userData.walletBalance.toLocaleString('en-US', { minimumFractionDigits: 2 })}</Text>
+            <Text style={styles.balanceAmount}>
+              $
+              {userData.walletBalance.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+              })}
+            </Text>
           </View>
         </View>
-        
+
         {/* Actions Section */}
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Account</Text>
-          
+
           <TouchableOpacity style={styles.menuItem}>
-            <MaterialCommunityIcons name="account-outline" size={24} color="#FFFFFF" />
+            <MaterialCommunityIcons
+              name="account-outline"
+              size={24}
+              color="#FFFFFF"
+            />
             <Text style={styles.menuItemText}>Personal Information</Text>
-            <MaterialCommunityIcons name="chevron-right" size={24} color="#8E8E93" />
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color="#8E8E93"
+            />
           </TouchableOpacity>
-          
+
           <TouchableOpacity style={styles.menuItem}>
-            <MaterialCommunityIcons name="wallet-outline" size={24} color="#FFFFFF" />
+            <MaterialCommunityIcons
+              name="wallet-outline"
+              size={24}
+              color="#FFFFFF"
+            />
             <Text style={styles.menuItemText}>Payment Methods</Text>
-            <MaterialCommunityIcons name="chevron-right" size={24} color="#8E8E93" />
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color="#8E8E93"
+            />
           </TouchableOpacity>
-          
+
           <TouchableOpacity style={styles.menuItem}>
             <MaterialCommunityIcons name="history" size={24} color="#FFFFFF" />
             <Text style={styles.menuItemText}>Transaction History</Text>
-            <MaterialCommunityIcons name="chevron-right" size={24} color="#8E8E93" />
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color="#8E8E93"
+            />
           </TouchableOpacity>
         </View>
-        
+
         {/* Settings Section */}
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Settings</Text>
-          
+
           <TouchableOpacity style={styles.menuItem}>
-            <MaterialCommunityIcons name="bell-outline" size={24} color="#FFFFFF" />
+            <MaterialCommunityIcons
+              name="bell-outline"
+              size={24}
+              color="#FFFFFF"
+            />
             <Text style={styles.menuItemText}>Notifications</Text>
-            <MaterialCommunityIcons name="chevron-right" size={24} color="#8E8E93" />
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color="#8E8E93"
+            />
           </TouchableOpacity>
-          
+
           <TouchableOpacity style={styles.menuItem}>
-            <MaterialCommunityIcons name="shield-outline" size={24} color="#FFFFFF" />
+            <MaterialCommunityIcons
+              name="shield-outline"
+              size={24}
+              color="#FFFFFF"
+            />
             <Text style={styles.menuItemText}>Security</Text>
-            <MaterialCommunityIcons name="chevron-right" size={24} color="#8E8E93" />
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color="#8E8E93"
+            />
           </TouchableOpacity>
-          
+
           <TouchableOpacity style={styles.menuItem}>
-            <MaterialCommunityIcons name="help-circle-outline" size={24} color="#FFFFFF" />
+            <MaterialCommunityIcons
+              name="help-circle-outline"
+              size={24}
+              color="#FFFFFF"
+            />
             <Text style={styles.menuItemText}>Help & Support</Text>
-            <MaterialCommunityIcons name="chevron-right" size={24} color="#8E8E93" />
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color="#8E8E93"
+            />
           </TouchableOpacity>
         </View>
-        
+
         {/* Sign Out Button */}
         <TouchableOpacity style={styles.signOutButton}>
           <Text style={styles.signOutText}>Sign Out</Text>
@@ -218,4 +270,3 @@ const styles = StyleSheet.create({
 });
 
 export default ProfileScreen;
-

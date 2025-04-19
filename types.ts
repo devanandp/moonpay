@@ -6,4 +6,3 @@ export interface CryptoData {
   price: number;
   isInWatchlist?: boolean;
 }
-

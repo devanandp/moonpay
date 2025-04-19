@@ -6,9 +6,9 @@
  */
 
 import React from 'react';
-import { StatusBar } from 'react-native';
-import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
-import { enableScreens } from 'react-native-screens';
+import {StatusBar} from 'react-native';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+import {enableScreens} from 'react-native-screens';
 import TabNavigator from './navigation/TabNavigator';
 
 // Enable screens for better performance
