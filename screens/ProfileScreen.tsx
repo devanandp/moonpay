@@ -22,8 +22,8 @@ interface ProfileScreenProps {
 
 // Mock user data
 const userData = {
-  name: 'Alex Johnson',
-  email: 'alex.johnson@example.com',
+  name: 'Devanand Padmanaban',
+  email: 'deva051195@gmail.com',
   walletBalance: 25463.89,
   profileImage: null, // In a real app, this would be a path to an image
 };

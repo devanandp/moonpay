@@ -1332,7 +1332,7 @@ PODS:
     - React-jsiexecutor
     - React-RCTFBReactNativeSpec
     - ReactCommon/turbomodule/core
-  - react-native-safe-area-context (4.14.1):
+  - react-native-safe-area-context (5.4.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1347,8 +1347,8 @@ PODS:
     - React-hermes
     - React-ImageManager
     - React-jsi
-    - react-native-safe-area-context/common (= 4.14.1)
-    - react-native-safe-area-context/fabric (= 4.14.1)
+    - react-native-safe-area-context/common (= 5.4.0)
+    - react-native-safe-area-context/fabric (= 5.4.0)
     - React-NativeModulesApple
     - React-RCTFabric
     - React-renderercss
@@ -1358,7 +1358,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context/common (4.14.1):
+  - react-native-safe-area-context/common (5.4.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1382,7 +1382,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context/fabric (4.14.1):
+  - react-native-safe-area-context/fabric (5.4.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1780,30 +1780,6 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNVectorIcons (10.2.0):
-    - DoubleConversion
-    - glog
-    - hermes-engine
-    - RCT-Folly (= 2024.11.18.00)
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-hermes
-    - React-ImageManager
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - Yoga
   - SocketRocket (0.7.1)
   - Yoga (0.0.0)
 
@@ -1881,7 +1857,6 @@ DEPENDENCIES:
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNScreens (from `../node_modules/react-native-screens`)
-  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -2032,8 +2007,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNScreens:
     :path: "../node_modules/react-native-screens"
-  RNVectorIcons:
-    :path: "../node_modules/react-native-vector-icons"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -2076,7 +2049,7 @@ SPEC CHECKSUMS:
   React-logger: cc55ca6e50aeb31216c0a9dec30871cac776ef9a
   React-Mapbuffer: 8df5296f9d9a61f980d293b55026cfebcd8dfb0a
   React-microtasksnativemodule: c8ed30f8ec30affbc73411c54207bd67b1125bbb
-  react-native-safe-area-context: 68d907fb669c39dbaa01474a374fdab433cd9959
+  react-native-safe-area-context: 562163222d999b79a51577eda2ea8ad2c32b4d06
   React-NativeModulesApple: 8a465be9a58afc56f48c1322331ffbdecd3d4877
   React-oscompat: 74eb4badd12e93899f37a5dbb03d8a638011a292
   React-perflogger: dba4ffef10c54537fa33cb2580cf6d4c48458d36
@@ -2109,7 +2082,6 @@ SPEC CHECKSUMS:
   ReactCodegen: 86758c0e13c6b245ff0cd7123cc5e8910d67546a
   ReactCommon: aa48e4fddbc6a0afa19dca39a1b6016c150b5db4
   RNScreens: fcd4717f7c66e65b168d9f58df276ecfbb0c5e6d
-  RNVectorIcons: 941a39b5d3b9d8cf8ac2e2fc09b07bfafbcf9796
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: d15f5aa644c466e917569ac43b19cbf17975239a
 

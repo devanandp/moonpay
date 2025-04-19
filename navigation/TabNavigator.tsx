@@ -37,7 +37,7 @@ const TabNavigator = () => {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <MaterialCommunityIcons name="view-dashboard" color={color} size={size} />
           ),
         }}
       />
@@ -47,7 +47,7 @@ const TabNavigator = () => {
         options={{
           tabBarLabel: 'Watchlist',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="star" color={color} size={size} />
+            <MaterialCommunityIcons name="chart-line" color={color} size={size} />
           ),
         }}
       />
@@ -57,7 +57,7 @@ const TabNavigator = () => {
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
+            <MaterialCommunityIcons name="account-circle" color={color} size={size} />
           ),
         }}
       />
